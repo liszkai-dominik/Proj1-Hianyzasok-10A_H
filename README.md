@@ -6,3 +6,11 @@ Csapattagok:
 * Magyar Mátyás
 * Liszkai Dominik
 
+Feladat leírása:
+- Emelt színtű informatika érettségi Hiányzások című feladata
+- címkekezelés:
+    correcting: apró hibák javítása
+    name fixing: fájlnevek, függvények neveinek javítása
+    solution: megoldás osztályhoz kapcsolódó feladatok
+    task: projekt közbeni feladatok elvégzése
+
