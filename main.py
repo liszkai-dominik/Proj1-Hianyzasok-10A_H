@@ -1,5 +1,9 @@
+from Megoldas import Megoldas
+
+
 def main() -> None:
-    pass  # Kezd a kódolást itt!
+    mo: Megoldas = Megoldas('naplo.txt')
+    print(len(mo.hianyzasok))
 
 
 if __name__ == "__main__":
