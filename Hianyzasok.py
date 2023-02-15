@@ -1,12 +1,13 @@
 class Hianyzasok:
-    datum: int
-    nev: str
-    bejegyzes: str
-    hianyzasok: str
+    _dátum: str
+    _v_név: str
+    _k_név: str
+    _hiányzás: str
 
     def __init__(self, sor: str) -> None:
-        dátum, név, bejegyzes, hiányzások = sor.split(' ')
-        self.datum = int(dátum)
-        self.nev = név
-        self.bejegyzes = bejegyzes
-        self.hianyzasok = hiányzások
+        dátum, v_név, k_név, hiányzás = sor.split(';')
+        self._dátum = dátum
+        self._v_név = v_név
+        self._k_név = k_név
+        self._hiányzás = hiányzás
+
