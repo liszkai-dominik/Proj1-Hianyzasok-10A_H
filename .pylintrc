@@ -1,0 +1,10 @@
+[MASTER]
+disable=
+    C0114, # missing-module-docstring
+    C0116, # missing-function-docstring
+    C0115, # missing-class-docstring
+    C0103, # disable naming conv.
+    C0301, # disable line too long 
+    R1705, # no-else-return
+    R0915, # too-many-statements
+    R0912  # too-many-branches

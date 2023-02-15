@@ -10,3 +10,4 @@ class Hianyzasok:
         self._v_név = v_név
         self._k_név = k_név
         self._hiányzás = hiányzás
+
