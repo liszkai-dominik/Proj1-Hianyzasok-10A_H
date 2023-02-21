@@ -22,12 +22,19 @@ class Megoldas:
                 if sor.hianyzas == 'I':
                     igazolatlan += 1
         return igazolatlan
+
     def hetnapja(self, hónap: int, nap: int) -> str:
         napok_neve = ["vasarnap", "hétfő", "kedd", "szerda", "csütörtök", "péntek", "szombat"]
         napok_száma = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 335]
         nap_sorszam = (napok_száma[hónap - 1] + nap) % 7
         return napok_neve[nap_sorszam]
 
+    def hianyzasok_szama(self, nap: str, oraszam: int) -> int:
+        hianyzasok: int = 0
+        for sor in self.hianyzasok:
+            if self.hetnapja(sor.honap, sor.nap) == nap and sor.hianyzas[oraszam] != str(oraszam):
+                hianyzasok += 1
+        return hianyzasok - 2
 
     def __init__(self, állomány_neve: str) -> None:
         self._hianyzasok = []
