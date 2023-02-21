@@ -5,6 +5,10 @@ class Hianyzasok:
     _kereszt_nev: str
     _hianyzas: str
 
+    @property
+    def hianyzas(self) -> str:
+        return self._hianyzas
+
     def __init__(self, datum: str, sor: str) -> None:
         vezeték_név, kereszt_név, hiányzás = sor.split(' ')
         self._dátum = datum
