@@ -8,7 +8,6 @@ def main() -> None:
     print('2. feladat')
     print(f'A naplóban {len(mo.hianyzasok)} bejegyzés van.')
 
-
     # 3. feladat
     print('3.feladat:')
     print(f'Az igazolt hiányzások száma {mo.igazolt_hianyzas}, az igazolatlanoké {mo.igazolatlan_hianyzas} óra. ')
@@ -18,6 +17,12 @@ def main() -> None:
     honap = int(input("A hónap sorszáma= "))
     nap = int(input("A nap sorszáma= "))
     print(f'Azon a napon {mo.hetnapja(honap, nap)} volt.')
+
+    # 6. feladat
+    print("6. feladat: ")
+    adott_nap: str = str(input('A nap neve='))
+    adott_ora: int = int(input('Az óra sorszáma='))
+    print(f'Ekkor összesen {mo.hianyzasok_szama(adott_nap, adott_ora)} óra hiányzás történt.')
 
 
 if __name__ == "__main__":
