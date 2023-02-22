@@ -4,23 +4,20 @@ from Hianyzasok import Hianyzasok
 class Megoldas:
     hianyzasok: list[Hianyzasok] = []
 
-
     @property
     def igazolt_hianyzas(self) -> int:
         igazolt: int = 0
         for sor in self.hianyzasok:
-            for h in sor.hianyzas[1]:
-                if sor.hianyzas == 'X':
-                    igazolt += 1
+            for érték in sor.hianyzas:
+                igazolt += érték.count('X')
         return igazolt
 
     @property
     def igazolatlan_hianyzas(self) -> int:
         igazolatlan: int = 0
         for sor in self.hianyzasok:
-            for h in sor.hianyzas:
-                if sor.hianyzas == 'I':
-                    igazolatlan += 1
+            for érték in sor.hianyzas:
+                igazolatlan += érték.count('I')
         return igazolatlan
 
     def hetnapja(self, hónap: int, nap: int) -> str:
@@ -30,11 +27,11 @@ class Megoldas:
         return napok_neve[nap_sorszam]
 
     def hianyzasok_szama(self, nap: str, oraszam: int) -> int:
-        hianyzasok: int = 0
+        napok: int = 0
         for sor in self.hianyzasok:
-            if self.hetnapja(sor.honap, sor.nap) == nap and sor.hianyzas[oraszam] != str(oraszam):
-                hianyzasok += 1
-        return hianyzasok - 2
+            if self.hetnapja(sor.honap, sor.nap) == nap and sor.hianyzas[oraszam - 1] == 'X' or sor.hianyzas[oraszam - 1] == 'I':
+                napok += 1
+        return napok
 
     def __init__(self, állomány_neve: str) -> None:
         self._hianyzasok = []

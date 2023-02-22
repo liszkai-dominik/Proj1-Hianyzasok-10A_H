@@ -24,6 +24,9 @@ def main() -> None:
     adott_ora: int = int(input('Az óra sorszáma='))
     print(f'Ekkor összesen {mo.hianyzasok_szama(adott_nap, adott_ora)} óra hiányzás történt.')
 
+    # 7. feladat:
+    print('7. feladat')
+
 
 if __name__ == "__main__":
     main()
