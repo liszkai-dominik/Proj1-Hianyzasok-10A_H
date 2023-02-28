@@ -17,6 +17,10 @@ class Hianyzasok:
     def nap(self) -> int:
         return self._nap
 
+    @property
+    def név(self) -> str:
+        return self._vezetek_nev + self._kereszt_nev
+
     def __init__(self, datum: str, sor: str) -> None:
         vezeték_név, kereszt_név, hiányzás = sor.split(' ')
         self._dátum = datum
