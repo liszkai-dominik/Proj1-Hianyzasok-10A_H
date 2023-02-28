@@ -1,3 +1,4 @@
+from Seged import Seged
 from Megoldas import Megoldas
 
 
@@ -6,7 +7,7 @@ def main() -> None:
     mo: Megoldas = Megoldas('naplo.txt')
     # 2. feladat:
     print('2. feladat')
-    print(f'A naplóban {len(mo.hianyzasok)} bejegyzés van.')
+    print(f'A naplóban {mo.bejegyzesek_szama} bejegyzés van.')
 
     # 3. feladat
     print('3.feladat:')
@@ -16,7 +17,7 @@ def main() -> None:
     print("5. feladat")
     honap = int(input("A hónap sorszáma= "))
     nap = int(input("A nap sorszáma= "))
-    print(f'Azon a napon {mo.hetnapja(honap, nap)} volt.')
+    print(f'Azon a napon {Seged.hetnapja(honap, nap)} volt.')
 
     # 6. feladat
     print("6. feladat: ")
@@ -26,6 +27,7 @@ def main() -> None:
 
     # 7. feladat:
     print('7. feladat')
+    print(f'A legtöbbet hiányzó tanulók: {mo.hiányzók}')
 
 
 if __name__ == "__main__":
