@@ -45,7 +45,7 @@ class Megoldas:
                         if ertek == 'X':
                             osszes_hianyzo[sor.név] += 1
         max_ertek = max(osszes_hianyzo.values())
-        nevek = {i for i in osszes_hianyzo if osszes_hianyzo[i] == max_ertek}
+        nevek = {i for i in osszes_hianyzo if osszes_hianyzo[i] == max_ertek }
         for elem in nevek:
             return elem
 
