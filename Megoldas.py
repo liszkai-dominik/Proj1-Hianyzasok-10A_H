@@ -32,7 +32,8 @@ class Megoldas:
                 igazolatlan += érték.count('I')
         return igazolatlan
 
-    def hiányzók(self, key: str) -> str:
+    @property
+    def hiányzók(self) -> str:
         osszes_hianyzo = {}
         for sor in self._hianyzasok:
             if sor.név not in osszes_hianyzo:
