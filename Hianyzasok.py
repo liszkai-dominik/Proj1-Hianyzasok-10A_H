@@ -21,6 +21,10 @@ class Hianyzasok:
     def név(self) -> str:
         return self._vezetek_nev + self._kereszt_nev
 
+    @property
+    def aznapi_hianyzas(self) -> int:
+        return self.hianyzas.count('X') + self.hianyzas.count('I')
+
     def __init__(self, datum: str, sor: str) -> None:
         vezeték_név, kereszt_név, hiányzás = sor.split(' ')
         self._dátum = datum

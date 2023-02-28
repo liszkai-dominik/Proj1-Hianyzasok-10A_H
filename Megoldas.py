@@ -34,20 +34,18 @@ class Megoldas:
 
     @property
     def hiányzók(self) -> str:
-        osszes_hianyzo = {}
+        osszes_hianyzas: dict[str, int] = {}
         for sor in self._hianyzasok:
-            if sor.név not in osszes_hianyzo:
-                osszes_hianyzo[sor.név] = 0
+            if sor.név not in osszes_hianyzas:
+                osszes_hianyzas[sor.név] = 0
         for sor in self._hianyzasok:
-            for key in osszes_hianyzo.keys():
-                if sor.név == key:
-                    for ertek in sor.hianyzas:
-                        if ertek == 'X':
-                            osszes_hianyzo[sor.név] += 1
-        max_ertek = max(osszes_hianyzo.values())
-        nevek = {i for i in osszes_hianyzo if osszes_hianyzo[i] == max_ertek }
-        for elem in nevek:
-            return elem
+            osszes_hianyzas[sor.név] += sor.aznapi_hianyzas
+        max_ertek = max(osszes_hianyzas.values())
+        vissza: str = ''
+        for key, value in osszes_hianyzas.items():
+            if value == max_ertek:
+                vissza += f'{key},'
+        return vissza
 
     def _file_beolvasasa(self, állomány_neve: str) -> None:
         with open(állomány_neve, 'r', encoding='utf-8') as file:
