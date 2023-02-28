@@ -32,7 +32,8 @@ class Megoldas:
                 igazolatlan += érték.count('I')
         return igazolatlan
 
-    def hiányzók(self, key: str) -> str:
+    @property
+    def hiányzók(self) -> str:
         osszes_hianyzo = {}
         for sor in self._hianyzasok:
             if sor.név not in osszes_hianyzo:
@@ -44,7 +45,7 @@ class Megoldas:
                         if ertek == 'X':
                             osszes_hianyzo[sor.név] += 1
         max_ertek = max(osszes_hianyzo.values())
-        nevek = {i for i in osszes_hianyzo if osszes_hianyzo[i] == max_ertek}
+        nevek = {i for i in osszes_hianyzo if osszes_hianyzo[i] == max_ertek }
         for elem in nevek:
             return elem
 
