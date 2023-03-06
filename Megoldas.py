@@ -33,7 +33,7 @@ class Megoldas:
         return igazolatlan
 
     @property
-    def hiányzók(self) -> str:
+    def hianyzok(self) -> str:
         osszes_hianyzas: dict[str, int] = {}
         for sor in self._hianyzasok:
             if sor.név not in osszes_hianyzas:
@@ -45,7 +45,7 @@ class Megoldas:
         for key, value in osszes_hianyzas.items():
             if value == max_ertek:
                 vissza += f'{key},'
-        return vissza
+        return vissza[:-1]
 
     def _file_beolvasasa(self, állomány_neve: str) -> None:
         with open(állomány_neve, 'r', encoding='utf-8') as file:

@@ -27,7 +27,7 @@ def main() -> None:
 
     # 7. feladat:
     print('7. feladat')
-    print(f'A legtöbbet hiányzó tanulók: {mo.hiányzók}')
+    print(f'A legtöbbet hiányzó tanulók: {mo.hianyzok}')
 
 
 if __name__ == "__main__":
