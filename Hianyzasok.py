@@ -24,9 +24,9 @@ class Hianyzasok:
     @property
     def aznapi_hianyzas(self) -> int:
         return self.hianyzas.count('X') + self.hianyzas.count('I')
-    
+
     @property
-    def datum(self) -> int:
+    def datum(self) -> str:
         return self._datum
 
     def __init__(self, datum: str, sor: str) -> None:

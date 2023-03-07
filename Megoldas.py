@@ -36,10 +36,10 @@ class Megoldas:
     def hianyzok(self) -> str:
         osszes_hianyzas: dict[str, int] = {}
         for sor in self._hianyzasok:
-            if sor.név not in osszes_hianyzas:
-                osszes_hianyzas[sor.név] = 0
+            if sor.nev not in osszes_hianyzas:
+                osszes_hianyzas[sor.nev] = 0
         for sor in self._hianyzasok:
-            osszes_hianyzas[sor.név] += sor.aznapi_hianyzas
+            osszes_hianyzas[sor.nev] += sor.aznapi_hianyzas
         max_ertek = max(osszes_hianyzas.values())
         vissza: str = ''
         for key, value in osszes_hianyzas.items():
