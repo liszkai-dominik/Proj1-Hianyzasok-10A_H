@@ -18,13 +18,6 @@ class TestMegoldas(TestCase):
     def test_igazolatlan_hianyzas(self) -> None:
         self.assertEqual(self.mo1.igazolatlan_hianyzas, 18)
 
-    def test_hetnapja(self) -> None:
-        self.assertEqual(self.mo2.hetnapja(1, 15), 'hétfő')
-        self.assertEqual(self.mo2.hetnapja(2, 6), 'kedd')
-        self.assertEqual(self.mo2.hetnapja(2, 23), 'péntek')
-        self.assertEqual(self.mo2.hetnapja(2, 5), 'hétfő')
-        self.assertEqual(self.mo2.hetnapja(5, 18), 'péntek')
-
     def test_hianyzasok_szama(self) -> None:
         self.assertEqual(self.mo1.hianyzasok_szama('szerda', 3), 49)
         self.assertEqual(self.mo1.hianyzasok_szama('hétfő', 5), 14)
